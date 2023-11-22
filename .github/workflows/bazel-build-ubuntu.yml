@@ -1,0 +1,30 @@
+# Basic single target build. Target linux to save credits.
+name: Bazel build on Ubuntu
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: bazel build //...
+
+      - name: Test
+        uses: trunk-io/breakpoint@v1
+        with:
+          breakpoint-id: test-breakpoint
+          run: bazel-bin/test/test
+          trunk-token: ${{ secrets.TRUNK_TOKEN }}
+          org: Scottz0r
