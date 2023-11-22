@@ -3,7 +3,7 @@
 
 namespace SZ
 {
-    double do_stuff(int x, int y);
+double do_stuff(int x, int y);
 }
 
 #endif // _DEMO_INCLUDE_GUARD
