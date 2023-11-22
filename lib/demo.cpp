@@ -2,15 +2,13 @@
 
 namespace SZ
 {
-double do_stuff(int x, int y)
+double do_stuff(int data_x, int data_y)
 {
-    if (y != 0)
+    if (data_y != 0)
     {
-        return x * 2.0 / y;
+        return data_x * 2.0 / data_y;
     }
-    else
-    {
-        return 0.0;
-    }
+
+    return 0.0;
 }
 } // namespace SZ

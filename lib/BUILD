@@ -6,5 +6,6 @@ cc_library(
     hdrs = ["demo.h"],
     visibility = [
         "//main:__pkg__",
+        "//test:__pkg__",
     ],
 )
