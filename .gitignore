@@ -1,1 +1,3 @@
 /bazel-*
+/.include
+/.vscode

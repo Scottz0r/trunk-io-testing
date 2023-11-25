@@ -7,5 +7,6 @@ cc_binary(
     ],
     deps = [
         "//lib:demo-lib",
+        "@com_google_googletest//:gtest_main",
     ],
 )
